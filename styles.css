@@ -1,0 +1,56 @@
+* {
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#header {
+    
+    background-image: url("img/vecteezy_blue-sky-with-clouds_2094671.jpg");
+    background-size: cover;
+    height: 200vh;
+    padding: 0;
+    margin: auto;
+    position: relative;
+}
+
+#intro {
+    color: white;
+    border: solid black 2px;
+    margin: 0 auto;
+    position: relative;
+    top: 40vh;
+    text-align: center;
+    width: 50%;
+
+}
+
+#header h1 {
+    font-size: 11vw;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 100vh;
+    border: solid black 2px;
+}
+
+#header::before {
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0) 50%, /* 80% of the gradient is fully transparent */
+    rgba(255, 255, 255, 1) 100% /* At 100%, the gradient becomes fully white */);
+    overflow: hidden;
+
+}
