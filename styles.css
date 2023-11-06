@@ -1,10 +1,11 @@
 * {
     font-family: Poppins, sans-serif;
     box-sizing: border-box;
+    margin: 0px;
 }
 
-body {
-    margin: 0px;
+html {
+    scroll-behavior: smooth;
 }
 
 #header {
@@ -12,6 +13,7 @@ body {
     background-image: url("img/vecteezy_blue-sky-with-clouds_2094671.jpg");
     background-size: cover;
     height: 200vh;
+    width: 100vw;
     padding: 0;
     margin: auto;
     position: relative;
@@ -19,12 +21,14 @@ body {
 
 #intro {
     color: white;
-    border: solid black 2px;
+    /* border: solid black 2px; */
     margin: 0 auto;
     position: relative;
     top: 40vh;
     text-align: center;
     width: 50%;
+    display: block;
+    line-height: 30px;
 
 }
 
@@ -47,7 +51,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1;
-
+    margin: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), 
     rgba(255, 255, 255, 0) 50%, /* 80% of the gradient is fully transparent */
     rgba(255, 255, 255, 1) 100% /* At 100%, the gradient becomes fully white */);
