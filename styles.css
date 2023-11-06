@@ -19,12 +19,38 @@ html {
     position: relative;
 }
 
+#header::after {
+    position: sticky;
+    content: "";
+    background-image: url("img/cloud.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 200px;
+    
+    width: 300px;
+    height: 50vh;
+    border: solid green 3px;
+    margin: 0 auto;
+}
+
+@keyframes fade_in {
+    from {color: rgba(255, 255, 255, 0);}
+    to {color: rgba(255, 255, 255, 1);}
+
+    from {top: 35vh;}
+    to {top: 40vh;}
+}
+
 #intro {
-    color: white;
+    animation-name: fade_in;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.800, 0.500, 0.01, 1);
+    animation-fill-mode: forwards;
+    color: transparent;
     /* border: solid black 2px; */
     margin: 0 auto;
     position: relative;
-    top: 40vh;
     text-align: center;
     width: 50%;
     display: block;
@@ -32,25 +58,30 @@ html {
 
 }
 
+@media {
+    
+}
+
 #header h1 {
-    font-size: 11vw;
+    font-size: 15vw;
     margin: 50px auto;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 255);
     position: absolute;
     top: 100vh;
-    border: solid black 2px;
+    overflow: hidden;
+    /* border: solid black 2px; */
 }
 
 #header::before {
-    
+    border: solid blue 2px;
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 0;
     margin: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), 
     rgba(255, 255, 255, 0) 50%, /* 80% of the gradient is fully transparent */
